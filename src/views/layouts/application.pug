@@ -1,0 +1,31 @@
+include /mixins/forms.pug
+
+doctype html
+html(lang="en")
+  head
+    title= Title
+    script(src='/assets/vendor.js')
+    script(src='/assets/application.js')
+  body
+    nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+      button.navbar-toggler.navbar-toggler-right
+        span.navbar-toggler-icon
+      a.navbar-brand(href="/") Task Manager
+      .collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item.active
+            a.nav-link(href=urlFor('users')) Users
+        ul.navbar-nav
+          if isSignedIn()
+            li.nav-item
+              a.nav-link(href=urlFor('session') data-method='delete' rel='nofollow') Sign Out
+          else
+            li.nav-item
+              a.nav-link(href=urlFor('newSession')) Sign In
+            li.nav-item
+              a.nav-link(href=urlFor('newUser')) Sign Up
+    .container
+      - const msg = flash.get()
+      if msg
+        .alert.alert-info.m-3= msg
+      block content

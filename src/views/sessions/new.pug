@@ -1,0 +1,7 @@
+extends /layouts/application.pug
+
+block content
+  +formFor(f, { url: urlFor('session'), method: 'post' })
+    +input(f, 'email')
+    +input(f, 'password', { as: 'password' })
+    +button(f)

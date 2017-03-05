@@ -1,0 +1,81 @@
+{
+  "name": "koa-nodejs-application",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "bin": {
+    "hexlet": "dist/bin/hexlet.js"
+  },
+  "engines": {
+    "node": "7.7.1"
+  },
+  "scripts": {
+    "gulp": "gulp",
+    "nodemon": "nodemon",
+    "test": "jest",
+    "babel-node": "babel-node",
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "start": "gulp server",
+    "eslint": "eslint",
+    "webpack": "webpack",
+    "build": "npm run webpack -- -p --env production && babel src --out-dir dist --source-maps inline",
+    "postinstall": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hexlet-boilerplates/nodejs-package.git"
+  },
+  "author": "Kirill Mokevnin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hexlet-boilerplates/nodejs-package/issues"
+  },
+  "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
+  "dependencies": {
+    "babel-cli": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-polyfill": "*",
+    "babel-preset-env": "*",
+    "babel-preset-flow": "*",
+    "babel-preset-stage-0": "*",
+    "bootstrap": "4.0.0-alpha.6",
+    "css-loader": "*",
+    "debug": "*",
+    "dotenv": "^4.0.0",
+    "gulp": "*",
+    "gulp-util": "*",
+    "jquery": "^3.1.1",
+    "jquery-ujs": "^1.2.2",
+    "koa": "*",
+    "koa-bodyparser": "^4.1.0",
+    "koa-flash-simple": "*",
+    "koa-logger": "*",
+    "koa-methodoverride": "^2.0.0",
+    "koa-pug": "^3.0.0-2",
+    "koa-router": "next",
+    "koa-generic-session": "*",
+    "koa-static": "^3.0.0",
+    "koa-webpack": "^0.3.1",
+    "lodash": "*",
+    "pg": "^6.1.2",
+    "sequelize": "*",
+    "sqlite3": "*",
+    "style-loader": "*",
+    "umzug": "^1.11.0",
+    "webpack": "*"
+  },
+  "devDependencies": {
+    "babel-eslint": "*",
+    "eslint": "*",
+    "eslint-config-airbnb-base": "*",
+    "eslint-plugin-flowtype": "*",
+    "eslint-plugin-import": "*",
+    "flow-bin": "^0.37",
+    "flow-typed": "*",
+    "jest": "^18",
+    "nodemon": "*"
+  }
+}
