@@ -9,6 +9,9 @@
   "engines": {
     "node": "7.7.1"
   },
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "gulp": "gulp",
     "nodemon": "nodemon",
@@ -52,11 +55,11 @@
     "koa": "*",
     "koa-bodyparser": "^4.1.0",
     "koa-flash-simple": "*",
+    "koa-generic-session": "*",
     "koa-logger": "*",
     "koa-methodoverride": "^2.0.0",
     "koa-pug": "^3.0.0-2",
     "koa-router": "next",
-    "koa-generic-session": "*",
     "koa-static": "^3.0.0",
     "koa-webpack": "^0.3.1",
     "lodash": "*",
@@ -73,9 +76,11 @@
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-flowtype": "*",
     "eslint-plugin-import": "*",
-    "flow-bin": "^0.37",
+    "flow-bin": "^0.42",
     "flow-typed": "*",
     "jest": "^18",
-    "nodemon": "*"
+    "jest-supertest-matchers": "*",
+    "nodemon": "*",
+    "supertest": "*"
   }
 }

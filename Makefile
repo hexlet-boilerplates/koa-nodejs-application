@@ -20,7 +20,7 @@ build:
 	npm run build
 
 test:
-	npm test
+	NODE_ENV=test npm test
 
 check-types:
 	npm run flow
