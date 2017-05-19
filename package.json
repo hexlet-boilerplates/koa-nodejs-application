@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "",
   "main": "dist/index.js",
-  "bin": {
-    "hexlet": "dist/bin/hexlet.js"
-  },
   "engines": {
     "node": "7.7.1"
   },
@@ -27,14 +24,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hexlet-boilerplates/nodejs-package.git"
+    "url": "git+https://github.com/hexlet-boilerplates/koa-nodejs-application.git"
   },
   "author": "Kirill Mokevnin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hexlet-boilerplates/nodejs-package/issues"
+    "url": "https://github.com/hexlet-boilerplates/koa-nodejs-application/issues"
   },
-  "homepage": "https://github.com/hexlet-boilerplates/nodejs-package#readme",
+  "homepage": "https://github.com/hexlet-boilerplates/koa-nodejs-application#readme",
   "dependencies": {
     "babel-cli": "*",
     "babel-core": "*",
