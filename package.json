@@ -7,7 +7,7 @@
     "hexlet": "dist/bin/hexlet.js"
   },
   "engines": {
-    "node": "7.7.1"
+    "node": "8.2.1"
   },
   "jest": {
     "testEnvironment": "node"
@@ -76,7 +76,7 @@
     "eslint-config-airbnb-base": "*",
     "eslint-plugin-flowtype": "*",
     "eslint-plugin-import": "*",
-    "flow-bin": "^0.46",
+    "flow-bin": "^0.51",
     "flow-typed": "*",
     "jest": "^20",
     "jest-supertest-matchers": "*",

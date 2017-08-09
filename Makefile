@@ -31,4 +31,20 @@ lint:
 publish:
 	npm publish
 
+compose:
+	docker-compose up
+
+compose-setup:
+	docker-compose run web yarn install
+
+compose-bash:
+	docker-compose run web bash
+
+compose-build:
+	docker-compose build
+
+compose-test:
+	docker-compose run web make test
+
+
 .PHONY: test
