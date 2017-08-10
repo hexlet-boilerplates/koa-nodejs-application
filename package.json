@@ -39,7 +39,6 @@
     "babel-cli": "*",
     "babel-core": "*",
     "babel-loader": "*",
-    "babel-plugin-transform-runtime": "*",
     "babel-polyfill": "*",
     "babel-preset-env": "*",
     "babel-preset-flow": "*",
