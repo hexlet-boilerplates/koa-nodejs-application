@@ -1,7 +1,12 @@
 - const getInputName = (f, property) => `${f.name}[${property}]`
 
 mixin formFor(f, options = {})
-  form(action=_.get(options, 'url') method=_.get(options, 'method', 'get'))
+  - const url = _.get(options, 'url');
+  - const method = _.get(options, 'method', 'get').toLowerCase();
+  - const isStandart = _.includes(['get', 'post'], method);
+  form(action= url method= isStandart ? method : 'post')
+    if !isStandart
+      input(name='_method' type='hidden' value= method)
     block
 
 mixin input(f, property, options = { as: 'text' })
