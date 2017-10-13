@@ -15,8 +15,8 @@ import flash from 'koa-flash-simple';
 import _ from 'lodash';
 import methodOverride from 'koa-methodoverride';
 
-import getWebpackConfig from '../webpack.config.babel';
-import addRoutes from './controllers';
+import getWebpackConfig from './webpack.config.babel';
+import addRoutes from './routes';
 import container from './container';
 
 export default () => {

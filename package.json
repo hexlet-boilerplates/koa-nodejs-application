@@ -45,6 +45,7 @@
     "babel-preset-flow": "*",
     "babel-preset-stage-0": "*",
     "bootstrap": "4.0.0-beta",
+    "popper.js": "*",
     "css-loader": "*",
     "debug": "*",
     "dotenv": "*",

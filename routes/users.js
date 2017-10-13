@@ -1,6 +1,7 @@
 import buildFormObj from '../lib/formObjectBuilder';
+import { User } from '../models';
 
-export default (router, { User }) => {
+export default (router) => {
   router
     .get('users', '/users', async (ctx) => {
       const users = await User.findAll();

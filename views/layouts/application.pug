@@ -7,10 +7,10 @@ html(lang="en")
     script(src='/assets/vendor.js')
     script(src='/assets/application.js')
   body
-    nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
-      button.navbar-toggler.navbar-toggler-right
-        span.navbar-toggler-icon
+    nav.navbar.navbar-expand-lg.navbar-light.bg-faded
       a.navbar-brand(href="/") Task Manager
+      button.navbar-toggler(data-toggle="collapse" data-target="#navbarSupportedContent")
+        span.navbar-toggler-icon
       .collapse.navbar-collapse
         ul.navbar-nav.mr-auto
           li.nav-item.active

@@ -7,3 +7,4 @@ services:
      - "3000:3000"
     volumes:
      - .:/code
+     - ./.bash_history:/root/.bash_history

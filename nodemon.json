@@ -1,0 +1,4 @@
+{
+  "verbose": true,
+  "ignore": ["dist", "node_modules"]
+}

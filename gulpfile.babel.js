@@ -3,9 +3,8 @@ import 'babel-polyfill';
 import gulp from 'gulp';
 import gutil from 'gulp-util';
 import repl from 'repl';
-import container from './src/container';
-import init from './src/init';
-import getServer from './src';
+import container from './container';
+import getServer from '.';
 
 // gulp.task('default', console.log('hello!'));
 
@@ -18,11 +17,6 @@ gulp.task('console', () => {
   Object.keys(container).forEach((key) => {
     replServer.context[key] = container[key];
   });
-});
-
-gulp.task('init', async () => {
-  await init();
-  console.log('db was created');
 });
 
 gulp.task('server', (cb) => {

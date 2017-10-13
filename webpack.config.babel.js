@@ -4,7 +4,7 @@ import webpack from 'webpack';
 export default () => ({
   entry: {
     app: ['./client'],
-    vendor: ['babel-polyfill', 'jquery', 'jquery-ujs', 'bootstrap'],
+    vendor: ['babel-polyfill', 'jquery', 'jquery-ujs', 'popper.js', 'bootstrap'],
   },
   output: {
     path: path.join(__dirname, 'public', 'assets'),
@@ -29,6 +29,7 @@ export default () => ({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default'],
     }),
     new webpack.optimize.CommonsChunkPlugin({
       // This name 'vendor' ties into the entry definition
