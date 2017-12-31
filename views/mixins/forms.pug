@@ -15,7 +15,7 @@ mixin input(f, property, options = { as: 'text' })
     label= property
     if !f.errors[property]
       input(name=getInputName(f, property) class='form-control' type=options['as'] value=`${value}`)
-    if f.errors[property]
+    else
       input(name=getInputName(f, property) class='form-control is-invalid' type=options['as'] value=`${value}`)
       .invalid-feedback= f.errors[property].map(({ message }) => message).join('. ')
 
