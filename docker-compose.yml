@@ -5,6 +5,7 @@ services:
     command: make start
     ports:
      - "3000:3000"
+     - "8081:8081"
     volumes:
      - .:/code
      - ./.bash_history:/root/.bash_history

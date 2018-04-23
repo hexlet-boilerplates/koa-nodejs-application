@@ -15,7 +15,7 @@ import flash from 'koa-flash-simple';
 import _ from 'lodash';
 import methodOverride from 'koa-methodoverride';
 
-import getWebpackConfig from './webpack.config.babel';
+import webpackConfig from './webpack.config';
 import addRoutes from './routes';
 import container from './container';
 
@@ -42,9 +42,9 @@ export default () => {
   }));
   app.use(serve(path.join(__dirname, '..', 'public')));
 
-  if (process.env.NODE_ENV !== 'test') {
+  if (process.env.NODE_ENV !== 'production') {
     app.use(middleware({
-      config: getWebpackConfig(),
+      config: webpackConfig,
     }));
   }
 
@@ -56,6 +56,7 @@ export default () => {
 
   const pug = new Pug({
     viewPath: path.join(__dirname, 'views'),
+    noCache: process.env.NODE_ENV === 'development',
     debug: true,
     pretty: true,
     compileDebug: true,

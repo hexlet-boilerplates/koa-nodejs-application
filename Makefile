@@ -8,7 +8,7 @@ compose:
 	docker-compose up
 
 compose-install:
-	docker-compose run web yarn
+	docker-compose run web npm install
 
 compose-setup: prepare compose-build compose-install compose-db-setup
 	npm run flow-typed install
