@@ -32,7 +32,7 @@ compose-console:
 	docker-compose-npm run gulp console
 
 compose-lint:
-	docker-compose run web npm run eslint
+	docker-compose run web npm run eslint .
 
 start:
 	DEBUG="application:*" npm run nodemon -- --watch .  --ext '.js' --exec npm run gulp -- server
