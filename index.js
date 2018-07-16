@@ -1,6 +1,6 @@
 // @flow
 
-import 'babel-polyfill';
+// import '@babel/polyfill';
 
 import path from 'path';
 import Koa from 'koa';
