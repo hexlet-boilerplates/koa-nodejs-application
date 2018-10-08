@@ -11,10 +11,10 @@ compose-install:
 	docker-compose run web npm install
 
 compose-setup: prepare compose-build compose-install compose-db-setup
-	npm run flow-typed install
+	npx flow-typed install
 
 compose-db-setup:
-	docker-compose run web npm run sequelize db:migrate
+	docker-compose run web npx sequelize db:migrate
 
 compose-kill:
 	docker-compose kill
@@ -29,20 +29,20 @@ compose-bash:
 	docker-compose run web bash
 
 compose-console:
-	docker-compose-npm run gulp console
+	docker-compose npx gulp console
 
 compose-lint:
-	docker-compose run web npm run eslint .
+	docker-compose run web npx eslint .
 
 start:
-	DEBUG="application:*" npm run nodemon -- --watch .  --ext '.js' --exec npm run gulp -- server
+	DEBUG="application:*" npx nodemon --watch .  --ext '.js' --exec npx gulp server
 
 compose-check-types:
-	docker-compose run web npm run flow
+	docker-compose run web npx flow
 
 compose-dist-build:
 	rm -rf dist
-	docker-compose run web npm run build
+	docker-compose run web npx build
 
 compose-publish: compose-dist-build
 	docker-compose run web npm publish

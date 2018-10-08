@@ -6,7 +6,7 @@ services:
     build: .
     command: make start
     ports:
-      - "3000:3000"
+      - "4000:4000"
       - "8081:8081"
     volumes:
       - .:/code
