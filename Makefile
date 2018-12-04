@@ -34,9 +34,6 @@ compose-console:
 compose-lint:
 	docker-compose run web npx eslint .
 
-start:
-	DEBUG="application:*" npx nodemon --watch .  --ext '.js' --exec npx gulp server
-
 compose-check-types:
 	docker-compose run web npx flow
 
@@ -46,5 +43,32 @@ compose-dist-build:
 
 compose-publish: compose-dist-build
 	docker-compose run web npm publish
+
+start:
+	npx gulp devServar
+
+build:
+	NODE_ENV=production npx gulp prodBuild
+
+webpack-bundle:
+	NODE_ENV=production npx webpack-cli
+
+console:
+	npx gulp serverConsole
+
+lint:
+	npx eslint .
+
+lint-fix:
+	npx eslint --fix .
+
+migrate:
+	npx sequelize db:migrate
+
+migrate-undo:
+	npx sequelize db:migrate:undo
+
+test:
+	npx jest
 
 .PHONY: test

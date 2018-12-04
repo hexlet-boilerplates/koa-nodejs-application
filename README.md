@@ -26,4 +26,4 @@ make compose-setup
 make compose
 ```
 
-Open localhost:4000
+Open localhost:3000
