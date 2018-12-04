@@ -30,11 +30,11 @@ export default (sequelize, DataTypes) => {
     },
   });
 
-  User.associate = function (models) {
+  User.associate = function (models) { // eslint-disable-line
     // associations can be defined here
   };
 
-  User.prototype.getFullName = function () {
+  User.prototype.getFullName = function () { // eslint-disable-line
     return `${this.firstName} ${this.lastName}`;
   };
 

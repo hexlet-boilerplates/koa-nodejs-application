@@ -91,7 +91,7 @@ const serverConsole = (done) => {
     replServer.context[key] = container[key];
   });
   done();
-}
+};
 
 
 const devServar = gulp.series(
