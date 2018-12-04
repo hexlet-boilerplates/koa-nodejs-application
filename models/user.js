@@ -28,15 +28,15 @@ export default (sequelize, DataTypes) => {
         len: [1, +Infinity],
       },
     },
-  }, {
-    classMethods: {
-      fullName() {
-        return `${this.firstName} ${this.lastName}`;
-      },
-      associate(models) {
-        // associations can be defined here
-      },
-    },
   });
+
+  User.associate = function (models) {
+    // associations can be defined here
+  };
+
+  User.prototype.getFullName = function () {
+    return `${this.firstName} ${this.lastName}`;
+  };
+
   return User;
 };

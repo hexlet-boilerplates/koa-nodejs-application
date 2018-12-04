@@ -1,7 +1,8 @@
 {
   "development": {
     "storage": "./db.development.sqlite",
-    "dialect": "sqlite"
+    "dialect": "sqlite",
+    "operatorsAliases": false
   },
   "test": {
     "storage": ":memory:",
@@ -12,6 +13,7 @@
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   }
 }

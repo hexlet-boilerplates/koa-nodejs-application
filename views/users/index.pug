@@ -10,6 +10,6 @@ block content
     tbody
       each user in users
         tr
-          td= user.fullName
+          td= user.getFullName()
           td= user.email
           td= user.createdAt
