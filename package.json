@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "start": "gulp server",
-    "build": "npm run webpack -- -p --env production && babel src --out-dir dist --source-maps inline",
+    "build": "npx webpack -p --env production && babel src --out-dir dist --source-maps inline",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -83,6 +83,7 @@
     "jest-cli": "^23.6.0",
     "jest-supertest-matchers": "0.0.1",
     "nodemon": "^1.18.9",
-    "supertest": "^3.3.0"
+    "supertest": "^3.3.0",
+    "webpack-cli": "^3.1.2"
   }
 }
