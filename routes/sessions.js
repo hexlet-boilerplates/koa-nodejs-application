@@ -29,4 +29,3 @@ export default (router) => {
       ctx.redirect(router.url('root'));
     });
 };
-

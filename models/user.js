@@ -33,9 +33,9 @@ export default (sequelize, DataTypes) => {
       fullName() {
         return `${this.firstName} ${this.lastName}`;
       },
-      associate(models) {
-        // associations can be defined here
-      },
+      // associate(models) {
+      //   // associations can be defined here
+      // },
     },
   });
   return User;
