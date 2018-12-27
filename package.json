@@ -15,7 +15,7 @@
   "scripts": {
     "test": "jest",
     "start": "gulp server",
-    "build": "npx webpack -p --env production && babel src --out-dir dist --source-maps inline",
+    "build": "npx webpack -p --env production",
     "postinstall": "npm run build"
   },
   "repository": {

@@ -42,7 +42,7 @@ compose-check-types:
 
 compose-dist-build:
 	rm -rf dist
-	docker-compose run web npx build
+	docker-compose run web npm run build
 
 compose-publish: compose-dist-build
 	docker-compose run web npm publish
