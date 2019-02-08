@@ -19,7 +19,7 @@ export default (sequelize, DataTypes) => {
     },
     password: {
       type: DataTypes.VIRTUAL,
-      set: (value) => {
+      set(value) {
         this.setDataValue('passwordDigest', encrypt(value));
         this.setDataValue('password', value);
         return value;
@@ -29,7 +29,7 @@ export default (sequelize, DataTypes) => {
       },
     },
   }, {
-    classMethods: {
+    getterMethods: {
       fullName() {
         return `${this.firstName} ${this.lastName}`;
       },
