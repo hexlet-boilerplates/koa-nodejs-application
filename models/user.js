@@ -29,7 +29,7 @@ export default (sequelize, DataTypes) => {
       },
     },
   }, {
-    classMethods: {
+    getterMethods: {
       fullName() {
         return `${this.firstName} ${this.lastName}`;
       },
