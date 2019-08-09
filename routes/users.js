@@ -12,8 +12,7 @@ export default (router) => {
       ctx.render('users/new', { f: buildFormObj(user) });
     })
     .post('users', '/users', async (ctx) => {
-      const { request: { body: form } } = ctx;
-      const user = User.build(form);
+      const user = User.build(ctx.request.body.form);
       try {
         await user.save();
         ctx.flash.set('User has been created');
