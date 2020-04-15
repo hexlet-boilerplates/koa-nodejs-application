@@ -19,4 +19,9 @@ mixin input(f, property, options = { as: 'text' })
 
 mixin button(f, type = 'submit')
   .form-group
-    input(class='btn' type=`${type}` value=`Save`)
+    input(class='btn btn-primary' type=`${type}` value=`Save`)
+
+mixin buttonTo(action, method)
+  form(action=action, method="post")
+    input(name="_method" type="hidden" value=method)
+    input(type='submit' class='form-control')&attributes(attributes)

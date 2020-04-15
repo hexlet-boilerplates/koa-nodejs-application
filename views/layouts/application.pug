@@ -6,7 +6,7 @@ html(lang="en")
     title= Title
     script(src='/assets/main.js')
   body
-    nav.navbar.navbar-expand-lg.navbar-light.bg-faded
+    nav.navbar.navbar-expand-lg.navbar-light.bg-light.mb-3
       a.navbar-brand(href="/") Task Manager
       button.navbar-toggler(data-toggle="collapse" data-target="#navbarSupportedContent")
         span.navbar-toggler-icon
@@ -17,7 +17,8 @@ html(lang="en")
         ul.navbar-nav
           if isSignedIn()
             li.nav-item
-              a.nav-link(href=urlFor('session') data-method='delete' rel='nofollow') Sign Out
+              //- a.nav-link(href=urlFor('session') data-method='delete' rel='nofollow') Sign Out
+              +buttonTo(urlFor('session'), 'delete')(class="btn nav-link" value="Sign Out")
           else
             li.nav-item
               a.nav-link(href=urlFor('newSession')) Sign In

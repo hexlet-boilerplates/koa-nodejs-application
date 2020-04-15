@@ -4,8 +4,12 @@ import { encrypt } from '../lib/secure';
 
 export default (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
+    firstName: {
+      type: DataTypes.STRING,
+    },
+    lastName: {
+      type: DataTypes.STRING,
+    },
     email: {
       type: DataTypes.STRING,
       unique: true,
@@ -24,10 +28,13 @@ export default (sequelize, DataTypes) => {
       set(value) {
         this.setDataValue('passwordDigest', encrypt(value));
         this.setDataValue('password', value);
-        return value;
       },
       validate: {
-        len: [1, +Infinity],
+        isLongEnough(value) {
+          if (value.length < 3) {
+            throw new Error('Password must be at least 3 characters long');
+          }
+        },
       },
     },
   }, {
