@@ -1,4 +1,4 @@
-// import '@babel/polyfill';
+// @ts-check
 
 import path from 'path';
 import Koa from 'koa';
@@ -43,7 +43,7 @@ export default () => {
   if (process.env.NODE_ENV !== 'production') {
     koaWebpack({
       config: webpackConfig,
-    }).then(m => app.use(m));
+    }).then((m) => app.use(m));
   }
 
   app.use(koaLogger());

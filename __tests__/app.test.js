@@ -1,3 +1,5 @@
+// @ts-check
+
 import request from 'supertest';
 import matchers from 'jest-supertest-matchers';
 

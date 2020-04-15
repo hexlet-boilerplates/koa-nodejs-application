@@ -1,3 +1,5 @@
+// @ts-check
+
 import buildFormObj from '../lib/formObjectBuilder';
 import { User } from '../models';
 

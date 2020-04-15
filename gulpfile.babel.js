@@ -1,5 +1,3 @@
-// import '@babel/polyfill';
-
 import gulp from 'gulp';
 // import gutil from 'gulp-util';
 import repl from 'repl';
