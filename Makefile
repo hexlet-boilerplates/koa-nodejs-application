@@ -11,7 +11,6 @@ compose-install:
 	docker-compose run web npm install
 
 compose-setup: prepare compose-build compose-install compose-db-setup
-	npx flow-typed install
 
 compose-db-setup:
 	docker-compose run web npx sequelize db:migrate
@@ -35,10 +34,7 @@ compose-lint:
 	docker-compose run web npx eslint .
 
 start:
-	DEBUG="application:*" npx nodemon --watch .  --ext '.js' --exec npx gulp server
-
-compose-check-types:
-	docker-compose run web npx flow
+	NODE_ENV=development DEBUG="application:*" npx nodemon --watch .  --ext '.js' --exec npx gulp server
 
 compose-dist-build:
 	rm -rf dist

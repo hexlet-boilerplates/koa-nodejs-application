@@ -1,4 +1,4 @@
-// import '@babel/polyfill';
+// @ts-check
 
 import path from 'path';
 import Koa from 'koa';
@@ -40,10 +40,10 @@ export default () => {
   }));
   app.use(serve(path.join(__dirname, 'public')));
 
-  if (process.env.NODE_ENV !== 'production') {
+  if (process.env.NODE_ENV === 'development') {
     koaWebpack({
       config: webpackConfig,
-    }).then(m => app.use(m));
+    }).then((m) => app.use(m));
   }
 
   app.use(koaLogger());
@@ -55,7 +55,7 @@ export default () => {
   const pug = new Pug({
     viewPath: path.join(__dirname, 'views'),
     noCache: process.env.NODE_ENV === 'development',
-    debug: true,
+    debug: process.env.NODE_ENV === 'development',
     pretty: true,
     compileDebug: true,
     locals: [],

@@ -1,3 +1,5 @@
+// @ts-check
+
 import buildFormObj from '../lib/formObjectBuilder';
 import { encrypt } from '../lib/secure';
 import { User } from '../models';
@@ -6,7 +8,7 @@ export default (router) => {
   router
     .get('newSession', '/session/new', async (ctx) => {
       const data = {};
-      ctx.render('sessions/new', { f: buildFormObj(data) });
+      await ctx.render('sessions/new', { f: buildFormObj(data) });
     })
     .post('session', '/session', async (ctx) => {
       const { email, password } = ctx.request.body.form;
@@ -22,7 +24,7 @@ export default (router) => {
       }
 
       ctx.flash.set('email or password were wrong');
-      ctx.render('sessions/new', { f: buildFormObj({ email }) });
+      await ctx.render('sessions/new', { f: buildFormObj({ email }) });
     })
     .delete('session', '/session', (ctx) => {
       ctx.session = {};

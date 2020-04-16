@@ -8,6 +8,7 @@ module.exports = {
     },
     email: {
       type: Sequelize.STRING,
+      unique: true,
     },
     passwordDigest: {
       type: Sequelize.STRING,
@@ -27,5 +28,5 @@ module.exports = {
       type: Sequelize.DATE,
     },
   }),
-  down: queryInterface => queryInterface.dropTable('Users'),
+  down: (queryInterface) => queryInterface.dropTable('Users'),
 };
