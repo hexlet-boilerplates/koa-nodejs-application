@@ -1,0 +1,19 @@
+name: Node CI
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install
+        run: make compose-setup
+      - name: Run linter
+        run: make compose-lint
+      - name: Run tests
+        run: make compose-test
