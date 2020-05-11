@@ -58,4 +58,7 @@ test:
 lint:
 	npx eslint .
 
+deploy:
+	git push heroku
+
 .PHONY: test
