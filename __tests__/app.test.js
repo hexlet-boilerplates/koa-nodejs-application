@@ -28,8 +28,10 @@ describe('requests', () => {
     expect(res).toHaveHTTPStatus(404);
   });
 
-  afterEach((done) => {
-    server.close();
-    done();
-  });
+  afterEach(async () => (
+    new Promise((done) => {
+      server.close();
+      done();
+    })
+  ));
 });

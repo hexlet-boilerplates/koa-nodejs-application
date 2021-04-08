@@ -17,6 +17,9 @@ gulp.task('console', () => {
   });
 });
 
+const port = process.env.PORT || 4000;
+const address = '0.0.0.0';
+
 gulp.task('server', (cb) => {
-  getServer().listen(process.env.PORT || 4000, cb);
+  getServer().listen(port, address, cb);
 });
