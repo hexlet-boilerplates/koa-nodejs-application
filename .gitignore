@@ -5,3 +5,4 @@ dist
 *.sqlite
 public/assets
 .bash_history
+.env
