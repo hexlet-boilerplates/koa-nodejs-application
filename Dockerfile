@@ -1,7 +1,6 @@
 FROM node:13.12
 
-RUN apt-get install -yq libsqlite3-0
-RUN npm install -g npm-check-updates
+RUN apt-get update && apt-get install -yq make
 
 WORKDIR /app
 
@@ -14,4 +13,4 @@ COPY . .
 
 RUN npm run build
 
-CMD ["npm", "start"]
+CMD ["bash", "-c", "make db-setup && npm start"]

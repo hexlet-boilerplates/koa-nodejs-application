@@ -8,7 +8,7 @@
     "dialect": "sqlite"
   },
   "production": {
-    "storage": ":memory:",
+    "storage": "./db.development.sqlite",
     "dialect": "sqlite"
   }
 }
