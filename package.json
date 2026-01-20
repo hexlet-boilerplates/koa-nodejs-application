@@ -33,7 +33,7 @@
     "@babel/core": "^7.13.14",
     "@babel/node": "^7.13.13",
     "@babel/preset-env": "^7.13.12",
-    "babel-loader": "^8.2.2",
+    "babel-loader": "^8.3.0",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.2.0",
     "debug": "^4.3.1",
@@ -59,7 +59,7 @@
     "sequelize-cli": "^6.2.0",
     "sqlite3": "^5.0.3",
     "style-loader": "^2.0.0",
-    "webpack": "^4.46.0"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
